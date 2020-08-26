@@ -1,0 +1,375 @@
+html, header, footer {
+    margin: 0;
+    padding: 0;
+}
+/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
+
+html{
+    height: 100%;
+}
+/*header*/
+header{
+    background-color: black;
+    height: 70px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+    header {
+        background-color: black;
+        min-width: 100%;
+        height: 70px;
+        margin: 0;
+        position: relative;
+
+    }
+
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    header{
+        background-color: black;
+        width: 100%;
+        height: 37px;
+
+    }
+
+}
+
+
+/* fond noir, affichage flex pour les elements qui composent le header, hauteur de 40px*/
+
+
+a:visited {
+    text-decoration: none;
+    color: #32CD32;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #32CD32;
+    font-style: normal;
+}
+
+
+
+img#utube {
+    position: absolute;
+    left: 80px;
+    top: 18px;
+}
+/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    img#utube {
+        position: absolute;
+        left: 60px;
+        top: 8px;
+        width: 30px;
+        height: 20px;
+    }
+
+}
+img#fbk {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+}
+/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    img#fbk {
+        position: absolute;
+        left: 20px;
+        top: 7px;
+        width: 25px;
+        height: 20px;
+
+    }
+
+}
+img#torche
+{
+    position: absolute;
+    left: 140px;
+    top: 13px;
+}
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    img#torche
+    {
+        position: absolute;
+        left: 110px;
+        top: 5px;
+        width: 20px;
+        height: 30px;
+    }
+}
+
+img#menu{
+    position: absolute;
+    right: 20px;
+    top: 13px;
+
+}
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    img#menu{
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+    }
+}
+/* fin header*/
+
+
+/*titre dans toute la page html*/
+
+/*couleur,alignement du texte, taille, police du texte*/
+
+h2 {
+    color: #32CD32;
+    text-align: center;
+    font-size: 1.6em;
+    font-family: "silkscreen", "courrier new", sans-serif;
+    padding: 2%;
+    word-break: break-word;
+}
+/*même chose*/
+
+p {
+    color: grey;
+    font-family: "silkscreen", "courrier new", sans-serif;
+    font-size: 0.9em;
+    padding: 3%;
+    text-align: center;
+}
+/*police,couleur,alignement du texte,taille, couper les mots et les mettre à la ligne s'ils sont trops grands
+marge interieur*/
+
+
+/*m^me chose mais pas de le word-wrap*/
+
+/*fin titre et paragraphes dans toute la page*/
+
+/*body*/
+
+
+body
+{
+    margin: 0;
+    min-height: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 1080px) {
+
+    body {
+        padding-bottom: 1em;
+
+    }
+}
+
+body:before
+{
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    background-image: url("../logo/background/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(7px);
+    z-index: -1;
+}
+
+@media screen and (max-width: 1080px) {
+
+    body:before
+    {
+        width: 100%;
+        min-height: 100%;
+        position: fixed;
+        background-image: url("../illustration/1x/resolution_courte.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(7px);
+        z-index: -1;
+
+
+
+    }
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    body:before
+    {
+        content: "";
+        width: 100%;
+        min-height: 100%;
+        position: fixed;
+        background-image: url("../logo/background/background1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(7px);
+        z-index: -1;
+    }
+}
+/*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions, ajout
+effet flou a l'arriere-plan. pour que ce soit uniquement l'arrierement qui soit flouté, ajout d'une valeur negative
+dans z-index*/
+/*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions*/
+
+/*rendre la page responsaive, ajout de regles selon certains parametres*/
+
+section{
+    margin: 3% 35% 5% 33%;
+    padding: 1%;
+    height: auto;
+    border: 3px solid limegreen;
+    background-color: black;
+
+}
+@media screen and (max-width: 1080px) {
+    section{
+
+        margin: 20% 25% 50% 25%;
+        padding: 1%;
+        height: auto;
+        border: 3px solid limegreen;
+        background-color: black;
+
+    }
+
+}
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    section{
+        margin: 10% 35% 20% 33%;
+        padding: 1%;
+        height: auto;
+        border: 3px solid limegreen;
+        background-color: black;
+    }
+}
+footer {
+
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1080px) {
+    footer {
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid lime;
+    }
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+    footer {
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+h4{
+
+    color: limegreen;
+    font-family: "silkscreen", "courrier new", sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+    h4{
+
+        color: limegreen;
+        font-family: "silkscreen", "courrier new", sans-serif;
+        font-size: 0.9em;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    h4{
+
+        color: limegreen;
+        font-family: "silkscreen", "courrier new", sans-serif;
+        font-size: 0.4em;
+        text-align: center;
+        padding-top: 1%;
+    }
+}
+p.p1 {
+    color: gray;
+    font-family: "silkscreen", "courrier new", sans-serif;
+    font-size: 1em;
+    padding-top: 0;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+    p.p1 {
+        color: gray;
+        font-family: "silkscreen", "courrier new", sans-serif;
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1080px) and (orientation: landscape){
+    p.p1 {
+        color: gray;
+        font-family: "silkscreen", "courrier new", sans-serif;
+        font-size: 0.5em;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+    }
+
+}
+/*pied de page, fond noir, largeur et hauteur, pas d'espace entre le footer et le bas de la page, bordure,
+position fixé */
+
+/*body*/
+
+
+
+
+/*ajouter une nouvelle police avec un seul format*/
+@font-face {
+    font-family: 'dogica';
+    src: url('../fonts/dogica.ttf') format('truetype');
+}
+
+/*ajouter une nouvelle police avec plusieurs formats*/
+@font-face {
+    font-family: 'silkscreen_expandedbold';
+    src: url('../fonts/slkscreb-webfont.eot');
+    src: url('../fonts/slkscreb-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/slkscreb-webfont.woff') format('woff'),
+    url('../fonts/slkscreb-webfont.ttf') format('truetype'),
+    url('../fonts/slkscreb-webfont.svg#silkscreen_expandedbold') format('svg');
+}
+@font-face {
+    font-family: 'rainyhearts';
+    src: url('../fonts/rainyhearts.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'silkscreen';
+    src: url('../fonts/slkscr.ttf') format('truetype');
+url('../fonts/slkscrb.ttf') format('truetype');
+url('../fonts/slkscre.ttf') format('truetype');
+}
