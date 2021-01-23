@@ -47,7 +47,8 @@
 
     <section>
         <div class="rea">
-            <p class="p4"><a href="../games-skills/php/index.php"id="gs">GAMES SKILLS</a></p>
+            <p class="p4"><a href="">GAMES SKILLS</a></p>
+                <p class="p3"> (lien non fonctionnel pour le moment)</p>
             <p class="p3">Il s'agit d'un site consacré aux différents métiers du jeu-vidéo et<br>
                 qui a pour but d'améliorer leur visibilité. Cette visibilité passe par la<br>
                 description du métier, la publication de projets, de réalisations...<br>
