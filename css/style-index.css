@@ -1,330 +1,111 @@
-html, header, footer {
+/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
+html, body, header, footer {
     margin: 0;
     padding: 0;
 }
-
 html {
     height: 100%;
-}
-
-/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
-
-/*header*/
-header {
-    background-color: black;
     width: 100%;
-    height: 70px;
-
 }
-
-
-@media screen and (max-width: 1080px) {
-    header {
-        background-color: black;
-        width: 100%;
-        height: 70px;
-        position: relative;
-
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    header {
-        background-color: black;
-        width: 100%;
-        height: 37px;
-        position: absolute;
-
-    }
-
-}
-
-/* fond noir, affichage flex pour les elements qui composent le header, hauteur de 40px*/
-
-
 a:visited {
     text-decoration: none;
-    color: #32CD32;
+    color: limegreen;
     font-style: normal;
 }
-
+a:hover{
+    text-decoration: underline;
+    color: lime;
+    font-style: normal;
+}
 a {
     text-decoration: none;
-    color: #32CD32;
+    color: lime;
     font-style: normal;
 }
-
-
-img#utube {
-    position: absolute;
-    left: 80px;
-    top: 18px;
-
+img{
+    padding: 5% 10% 5% 10%;
+}
+.link{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    width: 10%;
+}
+#fbk{
+    margin-left: 30%;
+}
+nav, ul{
+    display: flex;
+}
+nav{
+    margin-right: 10%;
+}
+ul{
+    align-items: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+li{
+    font-family: "silkscreen", "courrier new", sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    margin-right: 8%;
+    border-right: lime solid 1px;
+}
+.menu-small{
+    display: none;
+}
+/*header*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: black;
 }
 
-@media screen and (max-width: 1080px) {
-    img#utube {
-        position: absolute;
-        left: 80px;
-        top: 18px;
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    img#utube {
-        position: absolute;
-        left: 60px;
-        top: 8px;
-        width: 30px;
-        height: 20px;
-    }
-
-}
-
-/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
-
-img#fbk {
-    position: absolute;
-    left: 20px;
-    top: 13px;
-
-}
-
-@media screen and (max-width: 1080px) {
-    img#fbk {
-        position: absolute;
-        left: 20px;
-        top: 13px;
-
-    }
-
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    img#fbk {
-        position: absolute;
-        left: 20px;
-        top: 7px;
-        width: 25px;
-        height: 20px;
-
-    }
-
-}
-
-/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
-
-img#menu {
-    position: absolute;
-    right: 20px;
-    top: 13px;
-
-}
-
-@media screen and (max-width: 1080px) {
-    img#menu {
-        position: absolute;
-        right: 20px;
-        top: 13px;
-
-    }
-
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    img#menu {
-        position: absolute;
-        right: 20px;
-        top: 8px;
-        width: 20px;
-        height: 20px;
-
-    }
-
-}
-
-/* fin header*/
-
-
-/*titre dans toute la page html*/
-
-/*couleur,alignement du texte, taille, police du texte*/
-
-
-/*même chose*/
-
-/*m^me chose mais pas de le word-wrap*/
-
-/*fin titre et paragraphes dans toute la page*/
-
-/*body*/
-
-
+/*body
+ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions
+rendre la page responsaive, ajout de regles selon certains parametres*/
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: black;
     background-image: url("../logo/background/background1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    min-width: 100%;
     min-height: 100%;
+    min-width: 100%;
     position: relative;
-    /*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions*/
-
-    /*rendre la page responsaive, ajout de regles selon certains parametres*/
-
 }
+/*fin header*/
 
 
-@media screen and (max-width: 1080px) {
-
-    body {
-
-        background-image: url("../illustration/1x/resolution_courte.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        margin: 0;
-        min-height: 100%;
-        position: relative;
-
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    body {
-        background-color: black;
-        background-image: url("../logo/background/background1.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        margin: 0;
-        min-width: 100%;
-        min-height: 100%;
-        position: relative;
-        padding-bottom: 1em;
-
-    }
-
-
-}
-
+/*pied de page, fond noir, largeur, pas d'espace entre le footer et le bas de la page, bordure,
+position fixé */
 footer {
-
     background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
 }
-
-
-@media screen and (max-width: 1080px) {
-    footer {
-        background-color: black;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border-top: 1px solid lime;
-
-    }
-
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    footer {
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-}
-
-
-h4 {
-
+h2, h4 {
     color: limegreen;
     font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 1em;
     text-align: center;
 }
-
-@media screen and (max-width: 1080px) {
-    h4 {
-
-        color: limegreen;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.9em;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+h2{
+    font-size: 1.4em;
 }
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    h4 {
-
-        color: limegreen;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.4em;
-        text-align: center;
-        padding-top: 0;
-    }
+h4 {
+    font-size: 1em;
 }
-
-
-p {
+p, p1 {
     color: gray;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
     text-align: center;
 }
-
-p.p1 {
-    color: gray;
-    font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 1em;
-    padding-top: -1%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-@media screen and (max-width: 1080px) {
-    p.p1 {
-        color: gray;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.8em;
-        text-align: center;
-        margin-top: 0;
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    p.p1 {
-        color: gray;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.5em;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        text-align: center;
-    }
-
-}
-
-
-/*pied de page, fond noir, largeur et hauteur, pas d'espace entre le footer et le bas de la page, bordure,
-position fixé */
-
-/*body*/
-
-
 /*ajouter une nouvelle police avec un seul format*/
-@font-face {
-    font-family: 'dogica';
-    src: url('../fonts/dogica.ttf') format('truetype');
-}
-
-/*ajouter une nouvelle police avec plusieurs formats*/
 @font-face {
     font-family: 'silkscreen_expandedbold';
     src: url('../fonts/slkscreb-webfont.eot');
@@ -344,4 +125,78 @@ position fixé */
     src: url('../fonts/slkscr.ttf') format('truetype');
 url('../fonts/slkscrb.ttf') format('truetype');
 url('../fonts/slkscre.ttf') format('truetype');
+
+}
+/*mediaquerries*/
+@media screen and (max-width: 900px) {
+    header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .link{
+        display: flex;
+        width: 5%;
+        margin-left: 10%;
+        margin-right: 40%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url("../illustration/1x/resolution_courte.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100%;
+        min-width: 100%;
+        position: relative;
+    }
+  .menu-large{
+      display: none;
+  }
+  .menu-small{
+      display: block;
+  }
+    nav{
+        display: flex;
+        margin-right: 0;
+        text-align: center;
+    }
+    nav ul li{
+        border-right: none;
+        list-style-type: none;
+    }
+    nav ul::after{
+        content: "";
+        display: table;
+    }
+    nav a{
+        display: block;
+    }
+    .sous{
+        display: none;
+        box-shadow: 0px 1px 2px limegreen;
+        background-color: black;
+        position: fixed;
+        width: 500px;
+        z-index: 1;
+    }
+    nav > ul li:hover .sous{
+        display: block;
+    }
+    .sous li{
+        font-size: 0.8em;
+        text-align: left;
+    }
+    .sous a{
+        padding: 1% 1% 2% 1%;
+        border-bottom: none;
+    }
+    h4 {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+    p.p1 {
+        font-size: 0.8em;
+    }
 }

@@ -1,4 +1,3 @@
-/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
 html, body, header, footer {
     margin: 0;
     padding: 0;
@@ -6,6 +5,13 @@ html, body, header, footer {
 html {
     height: 100%;
     width: 100%;
+}
+
+/*header*/
+header {
+    display: flex;
+    justify-content:space-between;
+    background-color: black;
 }
 a:visited {
     text-decoration: none;
@@ -22,21 +28,21 @@ a {
     color: lime;
     font-style: normal;
 }
-img{
-    padding: 5% 10% 5% 10%;
-}
 .link{
     display: flex;
     align-items: center;
     margin-left: 2%;
     width: 10%;
 }
+img{
+    padding: 5% 10% 5% 10%;
+}
 #fbk{
     margin-left: 30%;
 }
-#torche {
-     margin-left: 50%;
- }
+#torche{
+    margin-left: 50%;
+}
 nav, ul{
     display: flex;
 }
@@ -59,15 +65,15 @@ li{
 .menu-small{
     display: none;
 }
+/*fin header*/
 
-/*header*/
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    background-color: black;
+h2 {
+    color: limegreen;
+    font-size: 1.3em;
+    font-family: "silkscreen", "courrier new", sans-serif;
+    text-align: center;
 }
-/*header*/
+
 
 body {
     display: flex;
@@ -95,71 +101,32 @@ body:before {
 /*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions, ajout
 effet flou a l'arriere-plan. pour que ce soit uniquement l'arrierement qui soit flouté, ajout d'une valeur negative
 dans z-index*/
-.group1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    margin: 2% 15% 2% 15%;
-    padding-top: 5%;
-    border-radius: 10px;
-}
-.position{
-    background-color: black;
-    width: 50%;
-    border: solid 1px lime;
-    box-shadow: 12px 12px 2px 1px lime;
-    border-radius: 10px;
-}
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.gallery {
-    background: lime;
-    width: 70%;
-    margin: 200px auto;
-    border-radius: 7px;
-    border-bottom: lime solid 1px;
 
-}
-.gallery-cell {
-    width: 500px;
-    height: 300px;
-    margin: 8px;
-    counter-increment: gallery-cell;
-}
-/* cell number */
-.gallery-cell:before {
-    display: block;
+section{
+    background-color: black;
+    border: lime solid 1px;
+    width: 25%;
+    margin: auto;
     text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: lime;
+    border-radius: 10px;
 }
-iframe {
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
 /**/
 footer {
     background-color: black;
 }
-h2, h4 {
+h4 {
     color: limegreen;
     font-family: "silkscreen", "courrier new", sans-serif;
+    font-size: 1em;
     text-align: center;
 }
-h2{
-    font-size: 1.4em;
-}
-h4 {
+.p2{
+    font-family:"silkscreen", "courrier new", sans-serif; ;
     font-size: 1em;
+    color: grey;
+    padding: 12%;
 }
-p, p1 {
+.p1 {
     color: gray;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
@@ -245,9 +212,9 @@ url('../fonts/slkscre.ttf') format('truetype');
     }
     .sous{
         display: none;
-        box-shadow: 0px 1px 2px limegreen;
+        box-shadow: 0 1px 2px limegreen;
         background-color: black;
-        position: absolute;
+        position: fixed;
         width: 500px;
         z-index: 1;
     }
@@ -262,39 +229,9 @@ url('../fonts/slkscre.ttf') format('truetype');
         padding: 1% 1% 2% 1%;
         border-bottom: none;
     }
-
-    .group1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 10% 0 2% 0;
-        background: none;
-    }
-    * {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .gallery {
-        background: #32CD32;
-        width: 90%;
-        margin: 200px auto;
-        border-radius: 4px;
-        border-bottom: lime solid 1px;
-    }
-    .gallery-cell {
-        width: 900px;
-        height: 300px;
-        margin: 7px;
-        counter-increment: gallery-cell;
-    }
-    .gallery-cell:before {
-        display: block;
-        text-align: center;
-        content: counter(gallery-cell);
-        line-height: 200px;
-        font-size: 80px;
-        color: lime;
+    section{
+        width: 50%;
+        margin: auto;
     }
     h4 {
         color: limegreen;

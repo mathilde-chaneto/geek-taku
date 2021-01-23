@@ -1,374 +1,156 @@
-html, header, footer {
+html, body, header, footer {
     margin: 0;
     padding: 0;
 }
-/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
-
-html{
+html {
     height: 100%;
-}
-/*header*/
-header{
-    background-color: black;
-    height: 70px;
     width: 100%;
 }
 
-@media screen and (max-width: 1080px) {
-    header {
-        background-color: black;
-        width: 100%;
-        height: 70px;
-        position: relative;
-
-    }
-
+/*header*/
+header {
+    display: flex;
+    justify-content:space-between;
+    background-color: black;
 }
-
-/*@media screen and (max-width: 1080px) and (orientation: landscape){
-    header{
-        background-color: black;
-        width: 100%;
-        height: 37px;
-
-    }
-
-}*/
-
-
-/* fond noir, affichage flex pour les elements qui composent le header, hauteur de 40px*/
-
-
 a:visited {
     text-decoration: none;
-    color: #32CD32;
+    color: limegreen;
     font-style: normal;
 }
-
+a:hover{
+    text-decoration: underline;
+    color: lime;
+    font-style: normal;
+}
 a {
     text-decoration: none;
-    color: #32CD32;
+    color: lime;
     font-style: normal;
 }
-
-
-
-img#utube {
-    position: absolute;
-    left: 80px;
-    top: 18px;
+.link{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    width: 10%;
 }
-/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
-
-@media screen and (max-width: 1080px) {
-    img#utube {
-        position: absolute;
-        left: 80px;
-        top: 18px;
-    }
-
+#fbk{
+    margin-left: 30%;
 }
-
-img#fbk {
-    position: absolute;
-    left: 20px;
-    top: 13px;
+#torche{
+    margin-left: 50%;
 }
-
-@media screen and (max-width: 1080px) {
-    img#fbk {
-        position: absolute;
-        left: 20px;
-        top: 13px;
-    }
-
+nav, ul{
+    display: flex;
 }
-
-/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
-
-img#torche
-{
-    position: absolute;
-    left: 140px;
-    top: 13px;
+nav{
+    margin-right: 10%;
 }
-
-@media screen and (max-width: 1080px) {
-    img#torche {
-        position: absolute;
-        left: 140px;
-        top: 13px;
-    }
-
-
+ul{
+    align-items: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
-
-img#menu{
-    position: absolute;
-    right: 20px;
-    top: 13px;
-
-}
-
-@media screen and (max-width: 1080px) {
-    img#menu {
-        position: absolute;
-        right: 20px;
-        top: 13px;
-
-    }
-
-}
-
-/* fin header*/
-
-
-/*titre dans toute la page html*/
-
-/*couleur,alignement du texte, taille, police du texte*/
-
-
-
-p {
-    color: grey;
+li{
     font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 0.9em;
-    padding: 3%;
+    font-size: 1.4em;
+    text-align: center;
+    margin-right: 8%;
+    border-right: lime solid 1px;
+}
+.menu-small{
+    display: none;
+}
+/*fin header*/
+h2 {
+    color: limegreen;
+    font-size: 1.4em;
+    font-family: "silkscreen", "courrier new", sans-serif;
     text-align: center;
 }
-/*police,couleur,alignement du texte,taille, couper les mots et les mettre à la ligne s'ils sont trops grands
-marge interieur*/
-
-
-/*m^me chose mais pas de le word-wrap*/
-
-/*fin titre et paragraphes dans toute la page*/
-
-/*body*/
-
-
-body
-{
-    margin: 0;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100%;
     min-height: 100%;
+    background-color: black;
     background-size: cover;
     position: relative;
 }
-
-@media screen and (max-width: 1080px) {
-
-    body {
-        padding-bottom: 1em;
-    }
-}
-
-body:before
-{
+body:before {
     content: "";
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
     position: fixed;
     background-image: url("../logo/background/background1.png");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     filter: blur(7px);
     z-index: -1;
 }
-
-@media screen and (max-width: 1080px) {
-
-    body:before
-    {
-        width: 100%;
-        min-height: 100%;
-        position: fixed;
-        background-image: url("../illustration/1x/resolution_courte.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        filter: blur(7px);
-        z-index: -1;
-
-
-
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    body:before
-    {
-        content: "";
-        width: 100%;
-        min-height: 100%;
-        position: fixed;
-        background-image: url("../logo/background/background1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        filter: blur(7px);
-        z-index: -1;
-    }
-}
 /*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions, ajout
 effet flou a l'arriere-plan. pour que ce soit uniquement l'arrierement qui soit flouté, ajout d'une valeur negative
 dans z-index*/
-/*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions*/
 
-/*rendre la page responsaive, ajout de regles selon certains parametres*/
-
-
-
-div#slider {
+.illustrations {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 7% 0 5% 0;
-    padding: 0 1% 0 1%;
-    background-color: black;
-    height: 380px;
-    overflow-x: auto;
+    justify-content: center;
+    margin: 10%;
 }
-
-div.group1{
-    margin: 1% 0 1% 0;
-    padding: 0 1% 0 1%;
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-@media screen and (max-width: 1080px) {
-    div#slider {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 15px 0 7% 0;
-        padding: 0;
-    }
+.gallery {
+    background: lime;
+    width: 35%;
+    margin: 200px auto;
+    border-radius: 7px;
 }
-
-footer {
-
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.gallery-cell {
+    width: 500px;
+    height: 300px;
+    margin: 10px;
+    counter-increment: gallery-cell;
 }
-
-
-@media screen and (max-width: 1080px) {
-    footer {
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        border-top: 1px solid lime;
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    footer {
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-}
-
-
-h3{
-    margin-left: 38%;
-    margin-right: 38%;
-    border: 1px solid darkgreen;
-    margin-bottom: 15%;
+.gallery-cell:before {
+    display: block;
     text-align: center;
-    color: limegreen;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: lime;
+}
+img{
+   padding: 5% 10% 5% 10%;
+}
+
+/**/
+footer {
     background-color: black;
-    font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 1.5em;
 }
-
-@media screen and (max-width: 1080px) {
-    h3{
-        margin-left: 20%;
-        margin-right: 20%;
-        border: 1px solid darkgreen;
-        margin-bottom: 15%;
-        width: 60%;
-        height: 30%;
-        text-align: center;
-        color: limegreen;
-        background-color: black;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 1em;
-    }
-
-}
-
-h4{
-
+h4 {
     color: limegreen;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
     text-align: center;
 }
-
-@media screen and (max-width: 1080px) {
-    h4{
-
-        color: limegreen;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.9em;
-        text-align: center;
-        margin-bottom: 10px;
-
-    }
+p{
+    color: black;
 }
-
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    h4{
-
-        color: limegreen;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.4em;
-        text-align: center;
-        padding-top: 1%;
-    }
-}
-p.p1 {
+.p1 {
     color: gray;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
-    padding-top: 0;
-    padding-bottom: 1%;
     text-align: center;
 }
-
-@media screen and (max-width: 1080px) {
-    p.p1 {
-        color: gray;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.8em;
-        text-align: center;
-    }
-}
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    p.p1 {
-        color: gray;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.5em;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        text-align: center;
-    }
-
-}
-/*pied de page, fond noir, largeur et hauteur, pas d'espace entre le footer et le bas de la page, bordure,
-position fixé */
-
-/*body*/
-
-
+/*fin body*/
 
 
 /*ajouter une nouvelle police avec un seul format*/
@@ -376,7 +158,6 @@ position fixé */
     font-family: 'dogica';
     src: url('../fonts/dogica.ttf') format('truetype');
 }
-
 /*ajouter une nouvelle police avec plusieurs formats*/
 @font-face {
     font-family: 'silkscreen_expandedbold';
@@ -395,4 +176,113 @@ position fixé */
     src: url('../fonts/slkscr.ttf') format('truetype');
 url('../fonts/slkscrb.ttf') format('truetype');
 url('../fonts/slkscre.ttf') format('truetype');
+}
+
+@media screen and (max-width: 900px) {
+    header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .link{
+        display: flex;
+        width: 5%;
+        margin-left: 10%;
+        margin-right: 40%;
+    }
+    body:before {
+        content: "";
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        background-image: url("../illustration/1x/resolution_courte.png");
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(7px);
+        z-index: -1;
+    }
+    .menu-large{
+        display: none;
+    }
+    .menu-small{
+        display: block;
+    }
+    nav{
+        display: flex;
+        margin-right: 0;
+        text-align: center;
+    }
+    nav ul li{
+        border-right: none;
+        list-style-type: none;
+    }
+    nav ul::after{
+        content: "";
+        display: table;
+    }
+    nav a{
+        display: block;
+    }
+    .sous{
+        display: none;
+        box-shadow: 0px 1px 2px limegreen;
+        background-color: black;
+        position: fixed;
+        width: 500px;
+        z-index: 1;
+    }
+    nav > ul li:hover .sous{
+        display: block;
+    }
+    .sous li{
+        font-size: 0.8em;
+        text-align: left;
+    }
+    .sous a{
+        padding: 1% 1% 2% 1%;
+        border-bottom: none;
+    }
+    body:before {
+        content: "";
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        background-image: url("../illustration/1x/resolution_courte.png");
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(7px);
+        z-index: -1;
+    }
+    .gallery {
+        background: lime;
+        width: 70%;
+        margin: 200px auto;
+        border-radius: 4px;
+        border-bottom: lime solid 1px;
+    }
+    .gallery-cell {
+        width: 700px;
+        height: 300px;
+        margin: 7px;
+        counter-increment: gallery-cell;
+    }
+    .gallery-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(gallery-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: lime;
+    }
+
+    h4 {
+        color: limegreen;
+        font-family: "silkscreen", "courrier new", sans-serif;
+        font-size: 0.9em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }

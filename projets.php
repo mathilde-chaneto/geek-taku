@@ -11,39 +11,58 @@
 
 <body>
 
-<div id="main-page">
-    <header>
+        <header>
 
-        <a href="https://www.youtube.com/mathildenatsuki"><img id="utube" src="logo/youtube.png"
-                                                               alt="petit logo youtube" width="40" height="28"/></a>
+            <div class="link">
+                <a href="https://www.youtube.com/mathildenatsuki"><img id="youtube" src="logo/youtube.png" alt="Petit logo Youtube" title="Lien Youtube""width="40px"
+                    height="28px"/></a>
 
-        <a href="https://www.facebook.com/natsuki.tachiba/"><img id="fbk" src="logo/fb.png" alt="petit logo facebook"
-                                                                 width="40" height="35"/></a>
+                <a href="https://www.facebook.com/natsuki.tachiba/"><img id="fbk" src="logo/fb.png" alt="Petit logo Facebook" title="Lien Facebook" width="40px"
+                                                                         height="35px"/></a>
 
-        <a href="index.php"><img id="torche" src="logo/torche.png" alt="icone torche" width="35" height="45"/></a>
+                <a href="index.php"><img id="torche" src="logo/torche.png" alt="Torche en pixel" title="Accueil" width="35px" height="45px"/></a>
+            </div>
+
+            <nav>
+                <ul class="menu-large">
+                    <li><a href="videos.php">VIDEOS</a></li>
+                    <li><a href="illustrations.php">ILLUSTRATIONS</a></li>
+                    <li><a href="projets.php">PROJETS</a></li>
+                    <li><a href="services.php">SERVICES</a></li>
+                </ul>
+
+                <ul class="menu-small">
+                    <li class="deroulant"><a href="#">MENU</a>
+                        <ul class="sous">
+                            <li><a href="videos.php">VIDEOS</a></li>
+                            <li><a href="illustrations.php">ILLUSTRATIONS</a></li>
+                            <li><a href="projets.php">PROJETS</a></li>
+                            <li><a href="services.php">SERVICES</a></li>
+                        </ul>
+            </nav>
 
 
-        <a href="navigation.php"><img id="menu" src="logo/menu.png" alt="menu navigation" width="40" height="35"/></a>
+        </header>
 
-
-    </header>
 
     <section>
-        <p> Oops, ce n'est pas encore prêt, il va falloir attendre encore un peu ! <br>
-            MAIS vous pouvez visiter la section vidéo qui est remplie :)<br>
-            Je vous conseille d'utiliser un ordinateur pour ça ;)</p>
+        <div class="rea">
+            <p class="p4"><a href="../games-skills/php/index.php"id="gs">GAMES SKILLS</a></p>
+            <p class="p3">Il s'agit d'un site consacré aux différents métiers du jeu-vidéo et<br>
+                qui a pour but d'améliorer leur visibilité. Cette visibilité passe par la<br>
+                description du métier, la publication de projets, de réalisations...<br>
+            </p>
+            <div class="pictures">
+            <img id="view" src="../games-skills/images/vignette.PNG" alt="" title="aperçu games skills"/>
+            </div>
+        </div>
 
     </section>
 
-
     <footer>
-
         <h4><a href="about.php">A propos</a></h4>
         <p class="p1">Copyright - All rights reserved - GEEK-TAKU</p>
-
     </footer>
-</div>
 
 </body>
-
 </html>

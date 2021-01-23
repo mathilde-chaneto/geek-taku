@@ -1,342 +1,166 @@
-html, header, footer {
+html, body, header, footer {
     margin: 0;
     padding: 0;
 }
-/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
-
-html{
+html {
     height: 100%;
-}
-/*header*/
-header{
-    background-color: black;
-    height: 70px;
     width: 100%;
 }
 
-@media screen and (max-width: 1080px) {
-    header {
-        background-color: black;
-        width: 100%;
-        height: 70px;
-        position: relative;
-
-    }
-
+/*header*/
+header {
+    display: flex;
+    justify-content:space-between;
+    background-color: black;
 }
-
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    header{
-        background-color: black;
-        width: 100%;
-        height: 37px;
-
-    }
-
-}
-
-
-/* fond noir, affichage flex pour les elements qui composent le header, hauteur de 40px*/
-
-
 a:visited {
     text-decoration: none;
-    color: #32CD32;
+    color: limegreen;
     font-style: normal;
 }
-
+a:hover{
+    text-decoration: underline;
+    color: lime;
+    font-style: normal;
+}
 a {
     text-decoration: none;
-    color: #32CD32;
+    color: lime;
     font-style: normal;
 }
-
-
-
-img#utube {
-    position: absolute;
-    left: 80px;
-    top: 18px;
+.link{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    width: 10%;
 }
-
-@media screen and (max-width: 1080px) {
-    img#utube {
-        position: absolute;
-        left: 80px;
-        top: 18px;
-    }
-
+img{
+     padding: 5% 10% 5% 10%;
+ }
+#fbk{
+    margin-left: 30%;
 }
-/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
-
-img#fbk {
-    position: absolute;
-    left: 20px;
-    top: 13px;
+#torche{
+    margin-left: 50%;
 }
-
-@media screen and (max-width: 1080px) {
-    img#fbk {
-        position: absolute;
-        left: 20px;
-        top: 13px;
-    }
-
+nav, ul{
+    display: flex;
 }
-/*position absolue, gauche : combien de px à gauche de l'image et en haut par rapport à un autre element*/
-
-
-img#torche
-{
-    position: absolute;
-    left: 140px;
-    top: 13px;
+nav{
+    margin-right: 10%;
 }
-
-@media screen and (max-width: 1080px) {
-    img#torche {
-        position: absolute;
-        left: 140px;
-        top: 13px;
-    }
-
-
+ul{
+    align-items: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
-
-img#menu{
-    position: absolute;
-    right: 20px;
-    top: 13px;
-
-}
-
-@media screen and (max-width: 1080px) {
-    img#menu {
-        position: absolute;
-        right: 20px;
-        top: 13px;
-
-    }
-
-}
-
-/* fin header*/
-
-
-/*titre dans toute la page html*/
-
-/*couleur,alignement du texte, taille, police du texte*/
-
-
-
-p {
-    color: grey;
+li{
     font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 0.9em;
-    padding: 3%;
+    font-size: 1.4em;
+    text-align: center;
+    margin-right: 8%;
+    border-right: lime solid 1px;
+}
+.menu-small{
+    display: none;
+}
+/*fin header*/
+
+h2 {
+    color: limegreen;
+    font-size: 1.3em;
+    font-family: "silkscreen", "courrier new", sans-serif;
     text-align: center;
 }
-/*police,couleur,alignement du texte,taille, couper les mots et les mettre à la ligne s'ils sont trops grands
-marge interieur*/
 
 
-/*m^me chose mais pas de le word-wrap*/
-
-/*fin titre et paragraphes dans toute la page*/
-
-/*body*/
-
-
-body
-{
-    margin: 0;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100%;
     min-height: 100%;
+    background-color: black;
     background-size: cover;
     position: relative;
 }
-
-@media screen and (max-width: 1080px) {
-
-    body {
-        padding-bottom: 1em;
-    }
-}
-
-body:before
-{
+body:before {
     content: "";
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
     position: fixed;
     background-image: url("../logo/background/background1.png");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     filter: blur(7px);
     z-index: -1;
 }
-
-@media screen and (max-width: 1080px) {
-
-    body:before
-    {
-        width: 100%;
-        min-height: 100%;
-        position: fixed;
-        background-image: url("../illustration/1x/resolution_courte.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        filter: blur(7px);
-        z-index: -1;
-
-
-
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    body:before
-    {
-        content: "";
-        width: 100%;
-        min-height: 100%;
-        position: fixed;
-        background-image: url("../logo/background/background1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        filter: blur(7px);
-        z-index: -1;
-    }
-}
 /*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions, ajout
 effet flou a l'arriere-plan. pour que ce soit uniquement l'arrierement qui soit flouté, ajout d'une valeur negative
 dans z-index*/
-/*ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions*/
-
-/*rendre la page responsaive, ajout de regles selon certains parametres*/
 
 section{
-    margin: 10% 35% 20% 33%;
-    padding: 1%;
-    height: auto;
-    border: 3px solid limegreen;
     background-color: black;
-
+    border: black solid 5px;
+    border-radius: 10px;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    text-align: center;
 }
-@media screen and (max-width: 1080px) {
-    section{
-
-        margin: 20% 25% 50% 25%;
-        padding: 1%;
-        height: auto;
-        border: 3px solid limegreen;
-        background-color: black;
-
-    }
-
+.rea {
+    width: 500px;
+    height: 200px;
+    margin: 5% auto 0 auto;
+    background-color: #a4a4a4;
+    border-radius: 10px;
 }
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    section{
-        margin: 10% 35% 20% 33%;
-        padding: 1%;
-        height: auto;
-        border: 3px solid limegreen;
-        background-color: black;
-    }
+#gs{
+    color: white;
 }
+.pictures{
+    background-color: white;
+    width: 400px;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#view{
+    width: 300px;
+    height: 200px;
+}
+.p4{
+    padding: 20px 0 0 0;
+    font-weight: bold;
+}
+.p3{
+    color: white;
+}
+/**/
 footer {
-
     background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
-
-
-@media screen and (max-width: 1080px) {
-    footer {
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        border-top: 1px solid lime;
-    }
-}
-
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-    footer {
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-}
-
-h4{
-
+h4 {
     color: limegreen;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
     text-align: center;
 }
-
-@media screen and (max-width: 1080px) {
-    h4{
-
-        color: limegreen;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.9em;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+.p2{
+    font-family:"silkscreen", "courrier new", sans-serif; ;
+    font-size: 1em;
+    color: grey;
+    padding: 12%;
 }
-
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    h4{
-
-        color: limegreen;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.4em;
-        text-align: center;
-        padding-top: 1%;
-    }
-}
-p.p1 {
+.p1 {
     color: gray;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
-    padding-top: 0;
-    padding-bottom: 1%;
     text-align: center;
 }
-
-@media screen and (max-width: 1080px) {
-    p.p1 {
-        color: gray;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.8em;
-        text-align: center;
-    }
-}
-@media screen and (max-width: 1080px) and (orientation: landscape){
-    p.p1 {
-        color: gray;
-        font-family: "silkscreen", "courrier new", sans-serif;
-        font-size: 0.5em;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        text-align: center;
-    }
-
-}
-/*pied de page, fond noir, largeur et hauteur, pas d'espace entre le footer et le bas de la page, bordure,
-position fixé */
-
-/*body*/
-
-
+/*fin body*/
 
 
 /*ajouter une nouvelle police avec un seul format*/
@@ -354,13 +178,95 @@ position fixé */
     url('../fonts/slkscreb-webfont.ttf') format('truetype'),
     url('../fonts/slkscreb-webfont.svg#silkscreen_expandedbold') format('svg');
 }
+
 @font-face {
     font-family: 'rainyhearts';
     src: url('../fonts/rainyhearts.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'silkscreen';
     src: url('../fonts/slkscr.ttf') format('truetype');
 url('../fonts/slkscrb.ttf') format('truetype');
 url('../fonts/slkscre.ttf') format('truetype');
+
+}
+
+@media screen and (max-width: 900px) {
+
+    header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .link{
+        display: flex;
+        width: 5%;
+        margin-left: 10%;
+        margin-right: 40%;
+    }
+    body:before {
+        content: "";
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        background-image: url("../illustration/1x/resolution_courte.png");
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(7px);
+        z-index: -1;
+    }
+    .menu-large{
+        display: none;
+    }
+    .menu-small{
+        display: block;
+    }
+    nav{
+        display: flex;
+        margin-right: 0;
+        text-align: center;
+    }
+    nav ul li{
+        border-right: none;
+        list-style-type: none;
+    }
+    nav ul::after{
+        content: "";
+        display: table;
+    }
+    nav a{
+        display: block;
+    }
+    .sous{
+        display: none;
+        box-shadow: 0 1px 2px limegreen;
+        background-color: black;
+        position: fixed;
+        width: 500px;
+        z-index: 1;
+    }
+    nav > ul li:hover .sous{
+        display: block;
+    }
+    .sous li{
+        font-size: 0.8em;
+        text-align: left;
+    }
+    .sous a{
+        padding: 1% 1% 2% 1%;
+        border-bottom: none;
+    }
+    section{
+        width: 50%;
+        margin: auto;
+    }
+    h4 {
+        color: limegreen;
+        font-family: "silkscreen", "courrier new", sans-serif;
+        font-size: 0.9em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
