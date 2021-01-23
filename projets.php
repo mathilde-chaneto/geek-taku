@@ -54,7 +54,7 @@
                 description du métier, la publication de projets, de réalisations...<br>
             </p>
             <div class="pictures">
-            <img id="view" src="../games-skills/images/vignette.PNG" alt="" title="aperçu games skills"/>
+            <img id="view" src="images/vignette.PNG" alt="" title="aperçu games skills"/>
             </div>
         </div>
 
