@@ -99,7 +99,7 @@ h2{
 h4 {
     font-size: 1em;
 }
-p, p1 {
+p, .p1 {
     color: gray;
     font-family: "silkscreen", "courrier new", sans-serif;
     font-size: 1em;
@@ -175,7 +175,7 @@ url('../fonts/slkscre.ttf') format('truetype');
     }
     .sous{
         display: none;
-        box-shadow: 0px 1px 2px limegreen;
+        box-shadow: 0 1px 2px limegreen;
         background-color: black;
         position: fixed;
         width: 500px;
