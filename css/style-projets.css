@@ -134,6 +134,14 @@ section{
 .p4{
     padding: 20px 0 0 0;
     font-weight: bold;
+    color: white;
+}
+.p4 a   {
+    color: white;
+}
+.p4 a:hover{
+    color: white;
+    text-decoration-line: underline;
 }
 .p3{
     color: white;
