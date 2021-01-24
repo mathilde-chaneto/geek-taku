@@ -41,6 +41,8 @@
                         <li><a href="projets.php">PROJETS</a></li>
                         <li><a href="services.php">SERVICES</a></li>
                     </ul>
+                </li>
+            </ul>
         </nav>
 
     </header>

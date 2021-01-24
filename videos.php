@@ -17,7 +17,7 @@
     <header>
 
         <div class="link">
-        <a href="https://www.youtube.com/mathildenatsuki"><img id="youtube" src="logo/youtube.png" alt="Petit logo Youtube" title="Lien Youtube""width="40px"
+        <a href="https://www.youtube.com/mathildenatsuki"><img id="youtube" src="logo/youtube.png" alt="Petit logo Youtube" title="Lien Youtube" width="40px"
                                                                height="28px"/></a>
 
         <a href="https://www.facebook.com/natsuki.tachiba/"><img id="fbk" src="logo/fb.png" alt="Petit logo Facebook" title="Lien Facebook" width="40px"
@@ -41,6 +41,8 @@
                     <li><a href="illustrations.php">ILLUSTRATIONS</a></li>
                     <li><a href="projets.php">PROJETS</a></li>
                     <li><a href="services.php">SERVICES</a></li>
+            </ul>
+                </li>
             </ul>
         </nav>
 
