@@ -1,94 +1,117 @@
-/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
-html, body, header, footer {
-    margin: 0;
-    padding: 0;
-}
-html {
-    height: 100%;
-    width: 100%;
-}
-a:visited {
-    text-decoration: none;
-    color: limegreen;
-    font-style: normal;
-}
-a:hover{
-    text-decoration: underline;
-    color: lime;
-    font-style: normal;
-}
-a {
-    text-decoration: none;
-    color: lime;
-    font-style: normal;
-}
-img{
-    padding: 5% 10% 5% 10%;
-}
-.link{
-    display: flex;
-    align-items: center;
-    margin-left: 2%;
-    width: 10%;
-}
-#fbk{
-    margin-left: 30%;
-}
-#torche {
-     margin-left: 50%;
- }
-nav, ul{
-    display: flex;
-}
-nav{
-    margin-right: 10%;
-}
-ul{
-    align-items: center;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-li{
-    font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 1.4em;
-    text-align: center;
-    margin-right: 8%;
-    border-right: lime solid 1px;
-}
-.menu-small{
-    display: none;
-}
 
+a {
+    color: green;
+    font-family: "silkscreen", "courrier new", sans-serif;
+}
+a:hover {
+    color: lime;
+}
 /*header*/
 header {
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     background-color: black;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+}
+/*div du header*/
+.link {
+    display: flex;
+    margin: 0 2rem 0 2rem;
+}
+#nav nav {
+    margin-right: 2rem;
+}
+.menu-400 {
+    margin-top: .5rem;
+}
+.link img {
+    margin-right: 1rem;
+}
+#youtube, #fbk{
+    width: 30px;
+}
+#youtube {
+    margin-top: .6rem;
+}
+#fbk {
+    margin-top: .3rem;
+    height: 30px;
+}
+#torche {
+    width: 35px;
+    height: 45px;
+}
+/*menu*/
+.menu-large {
+    display: none;
+}
+.menu-400{
+    margin-right: 3rem;
+}
+.menu-400 li a{
+    font-size: 1.5rem;
+    color: #32CD32;
+    font-family: "silkscreen", "courrier new", sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 8rem 2rem;
+}
+.menu {
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+#menu .menu li {
+    margin-top: 4rem;
+    margin-right: 2.5rem;
+}
+.bloc {
+    font-size: 2rem;
+}
+/*au survol des liens qui ont la classe bloc, ajouter transform et traansition*/
+.bloc:hover {
+    transform: scale(2);
+    transition: transform 3s, 1s;
+    font-size: 2.2rem;
+}
+body {
+    background-color: black;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
 }
 /*header*/
 
-body {
+#back {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-width: 100%;
-    min-height: 100%;
-    background-color: black;
+    min-height: 100vh;
     background-size: cover;
-    position: relative;
+    background-position: center;
+
 }
-body:before {
+#back:before {
     content: "";
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     position: fixed;
     background-image: url("../logo/background/background1.png");
-    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
     filter: blur(7px);
     z-index: -1;
 }
@@ -101,9 +124,10 @@ dans z-index*/
     align-items: center;
     justify-content: center;
     background-color: black;
-    margin: 2% 15% 2% 15%;
+    margin: 10% 15% 15% 15%;
     padding-top: 5%;
     border-radius: 10px;
+    height: 40%;
 }
 .position{
     background-color: black;
@@ -147,6 +171,9 @@ iframe {
 /**/
 footer {
     background-color: black;
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
 }
 h2, h4 {
     color: limegreen;

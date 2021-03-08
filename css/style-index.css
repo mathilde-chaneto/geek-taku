@@ -1,111 +1,4 @@
-/* aucune marge interrieur ni exterieur pour les elements inqiqués*/
-html, body, header, footer {
-    margin: 0;
-    padding: 0;
-}
-html {
-    height: 100%;
-    width: 100%;
-}
-a:visited {
-    text-decoration: none;
-    color: limegreen;
-    font-style: normal;
-}
-a:hover{
-    text-decoration: underline;
-    color: lime;
-    font-style: normal;
-}
-a {
-    text-decoration: none;
-    color: lime;
-    font-style: normal;
-}
-img{
-    padding: 5% 10% 5% 10%;
-}
-.link{
-    display: flex;
-    align-items: center;
-    margin-left: 2%;
-    width: 10%;
-}
-#fbk{
-    margin-left: 30%;
-}
-nav, ul{
-    display: flex;
-}
-nav{
-    margin-right: 10%;
-}
-ul{
-    align-items: center;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-li{
-    font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 1.4em;
-    text-align: center;
-    margin-right: 8%;
-    border-right: lime solid 1px;
-}
-.menu-small{
-    display: none;
-}
-/*header*/
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    background-color: black;
-}
 
-/*body
-ajout fond noir, ajout image arriere plan, pas de repetition, fixé et reste aux mêmes dimensions
-rendre la page responsaive, ajout de regles selon certains parametres*/
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: black;
-    background-image: url("../logo/background/background1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100%;
-    min-width: 100%;
-    position: relative;
-}
-/*fin header*/
-
-
-/*pied de page, fond noir, largeur, pas d'espace entre le footer et le bas de la page, bordure,
-position fixé */
-footer {
-    background-color: black;
-}
-h2, h4 {
-    color: limegreen;
-    font-family: "silkscreen", "courrier new", sans-serif;
-    text-align: center;
-}
-h2{
-    font-size: 1.4em;
-}
-h4 {
-    font-size: 1em;
-}
-p, .p1 {
-    color: gray;
-    font-family: "silkscreen", "courrier new", sans-serif;
-    font-size: 1em;
-    text-align: center;
-}
-/*ajouter une nouvelle police avec un seul format*/
 @font-face {
     font-family: 'silkscreen_expandedbold';
     src: url('../fonts/slkscreb-webfont.eot');
@@ -127,76 +20,193 @@ url('../fonts/slkscrb.ttf') format('truetype');
 url('../fonts/slkscre.ttf') format('truetype');
 
 }
-/*mediaquerries*/
-@media screen and (max-width: 900px) {
-    header{
-        display: flex;
-        justify-content: flex-start;
-    }
-    .link{
-        display: flex;
-        width: 5%;
-        margin-left: 10%;
-        margin-right: 40%;
-    }
+@media screen and (min-width: 300px) {
+    /*hauteur, largeur, texte centré, background.
+    Le z-index est un test, il servira pour d'autres éléments du site*/
     body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-image: url("../illustration/1x/resolution_courte.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        min-height: 100%;
+        background-color: black;
         min-width: 100%;
-        position: relative;
-    }
-  .menu-large{
-      display: none;
-  }
-  .menu-small{
-      display: block;
-  }
-    nav{
-        display: flex;
-        margin-right: 0;
         text-align: center;
+        z-index: -2;
     }
-    nav ul li{
-        border-right: none;
+
+    /*partie liens : couleur et police
+    + affichage au survol de la souris*/
+    a {
+        color: green;
+        font-family: "silkscreen", "courrier new", sans-serif;
+    }
+    a:hover {
+        color: lime;
+    }
+
+    /*header
+    affichage avec flex*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    /*affichage de la div link + img dans le header
+    les images n'ont pas toutes les même dimensions, réglages différents*/
+    .link {
+        display: flex;
+        margin: .5rem 2rem 0 2rem;
+    }
+    .link img {
+        margin-right: 1rem;
+    }
+    #youtube, #fbk{
+        width: 30px;
+    }
+    #youtube {
+        margin-top: .6rem;
+    }
+    #fbk {
+        margin-top: .3rem;
+        height: 30px;
+    }
+    #torche {
+        width: 35px;
+        height: 45px;
+        display: none;
+    }
+
+    /*attention
+    balise nav dans une div dont l'id est nav +
+    aucune puce*/
+    #nav nav {
+        margin-right: 2rem;
+    }
+    ul {
         list-style-type: none;
     }
-    nav ul::after{
-        content: "";
-        display: table;
+
+    /*affichage  du petit menu de la div #nav*/
+    .menu-400 {
+        margin-top: .5rem;
+        margin-right: 3rem;
     }
-    nav a{
-        display: block;
+    .menu-400 li a{
+        font-size: 1.5rem;
+        color: #32CD32;
+        font-family: "silkscreen", "courrier new", sans-serif;
     }
-    .sous{
+
+    /*menu pour les écrans plus grands.
+    Caché pour ce format d'écran*/
+    .menu-large {
         display: none;
-        box-shadow: 0 1px 2px limegreen;
+    }
+
+    /*lien du menu-400 vers celui-ci
+    alignement horizontale et verticale avec justify-content et align-items
+    définition des marges pour ce menu (et li)
+    et ajout de transition pour les liens ayant la classe bloc*/
+    .menu {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 8rem 5rem 0 5rem;
+    }
+    .menu li {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .bloc {
+        font-size: 2rem;
+    }
+    .bloc:hover {
+        transform: scale(2);
+        transition: transform 3s, 1s;
+        font-size: 2.2rem;
+    }
+    /*fin header*/
+
+    /*--------------------------------------------------*/
+
+    /*section particulière,  ne contient rien à part ce background
+    pas réussi à avoir l'affichage actuel sans ceci
+    le height est a 80vh, sinon il y a un défilement, mais augmente la taille du footer. l'unité en % ne fonctionne pas ici
+    si on le met, il n'y a plus de background*/
+    #back {
+        background-image: url("../logo/background/resolution-smartphone.png");
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+    }
+    /*---------------------------------------------------*/
+
+    /*footer*/
+    footer {
         background-color: black;
-        position: fixed;
-        width: 500px;
-        z-index: 1;
     }
-    nav > ul li:hover .sous{
-        display: block;
+    footer h4{
+        margin-top: .5rem;
     }
-    .sous li{
-        font-size: 0.8em;
-        text-align: left;
+    footer p{
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: #666666;
+        font-family: "silkscreen", "courrier new", sans-serif;
     }
-    .sous a{
-        padding: 1% 1% 2% 1%;
-        border-bottom: none;
-    }
-    h4 {
-        font-size: 0.9em;
-        margin-bottom: 10px;
-    }
-    p.p1 {
-        font-size: 0.8em;
+    /*fin de la parie index*/
+
+    /*Si idées d'améliorations, les noter ici*/
+}
+
+@media screen and (min-width: 400px) {
+    #back {
+        background-position: 20% 70%;
     }
 }
+@media screen and (min-width: 700px) {
+    #back {
+        background-image: url("../logo/background/background1.png");
+        background-position: 20% 20%;
+    }
+}
+@media screen and (min-width: 1000px) {
+
+    #torche {
+        display: block;
+    }
+
+
+    #nav nav {
+        margin-right: 2rem;
+    }
+    .menu-400 {
+        display: none;
+    }
+
+
+    .menu-large {
+        display: flex;
+        margin-right: 1rem;
+    }
+    .menu-large {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .menu-large li {
+        margin-right: 1rem;
+        margin-left: .3rem;
+        padding-right: .8rem;
+        padding-bottom: 1rem;
+    }
+    .menu-large li a {
+        font-size: 1.3rem;
+    }
+    .menu-large li:hover {
+        border-bottom: lime solid 1px;
+    }
+    .menu-large li a:hover {
+        text-decoration-line: none;
+    }
+}
+
